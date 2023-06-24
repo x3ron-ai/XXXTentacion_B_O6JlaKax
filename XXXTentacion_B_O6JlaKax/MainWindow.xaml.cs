@@ -15,9 +15,7 @@ using System.Windows.Shapes;
 
 namespace XXXTentacion_B_O6JlaKax
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
+    // виталий лох
     public partial class MainWindow : Window
     {
         public MainWindow()
