@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:XXXTentacion_B_O6JlaKax"
         mc:Ignorable="d"
         Title="SunClouds" Height="450" Width="800" MinHeight="274" MinWidth="438">
-    <Grid>
-        
+    <Grid Style="{DynamicResource them}">
+        <Frame Content="{Binding Frame}" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>
