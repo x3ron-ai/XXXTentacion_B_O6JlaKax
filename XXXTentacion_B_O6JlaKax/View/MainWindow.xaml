@@ -5,17 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:XXXTentacion_B_O6JlaKax"
         mc:Ignorable="d"
-        Title="SunClouds" Height="450" Width="800" MinHeight="158" MinWidth="206">
+        Title="SunClouds" Height="450" Width="800" MinHeight="204" MinWidth="305">
     <Grid Style="{DynamicResource them}">
         <Grid.RowDefinitions>
-            <RowDefinition Height="115*"/>
-            <RowDefinition Height="212*"/>
-            <RowDefinition Height="107*"/>
+            <RowDefinition Height="0*"/>
+            <RowDefinition/>
+            <RowDefinition Height="0*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="133*"/>
-            <ColumnDefinition Width="154*"/>
-            <ColumnDefinition Width="113*"/>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
         <Grid Style="{DynamicResource Grid}" HorizontalAlignment="Center" Width="304" Height="203" VerticalAlignment="Center" Grid.Column="1" Grid.Row="1">
             <TextBlock Style="{DynamicResource TextBlock}" TextWrapping="Wrap" Text="SunClouds" Margin="8,10,10,152" TextAlignment="Center" FontSize="28" RenderTransformOrigin="0.42,0.504"/>
