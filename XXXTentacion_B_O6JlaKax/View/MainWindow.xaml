@@ -20,7 +20,7 @@
         <Grid Style="{DynamicResource Grid}" HorizontalAlignment="Center" Width="304" Height="203" VerticalAlignment="Center" Grid.Column="1" Grid.Row="1">
             <TextBlock Style="{DynamicResource TextBlock}" TextWrapping="Wrap" Text="SunClouds" Margin="8,10,10,152" TextAlignment="Center" FontSize="28" RenderTransformOrigin="0.42,0.504"/>
             <Button Style="{DynamicResource Button}" Margin="23,140,0,0" Content="Узнать погоду" RenderTransformOrigin="0.433,0.04" FontSize="20" Height="45" VerticalAlignment="Top" HorizontalAlignment="Left" Width="257"/>
-            <Button Style="{DynamicResource Button}" Margin="23,88,23,68" Content="Ваш город" RenderTransformOrigin="0.433,0.04" FontSize="20"/>
+            <TextBox Style="{DynamicResource TextBox}" Margin="23,88,23,68" RenderTransformOrigin="0.433,0.04" VerticalContentAlignment="Center" FontSize="20" TextAlignment="Center"/>
         </Grid>
 
     </Grid>
