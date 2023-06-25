@@ -10,7 +10,7 @@ using XXXTentacion_B_O6JlaKax.Model;
 
 namespace XXXTentacion_B_O6JlaKax.ViewModel.Helpers
 {
-    class ApiHelper
+    static class ApiHelper
     {
         public static WeatherInfo getWeather(string city)
         {
