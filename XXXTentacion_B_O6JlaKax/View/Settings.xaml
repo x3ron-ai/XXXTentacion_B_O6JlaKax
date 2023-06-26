@@ -1,0 +1,59 @@
+﻿<Page x:Class="XXXTentacion_B_O6JlaKax.View.Settings"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:XXXTentacion_B_O6JlaKax.View"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Settings">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0*"/>
+            <RowDefinition Height="45*"/>
+            <RowDefinition Height="169*"/>
+            <RowDefinition Height="11*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="257*"/>
+            <ColumnDefinition Width="21*"/>
+            <ColumnDefinition Width="501*"/>
+            <ColumnDefinition Width="21*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Margin="0,0,1,0" Style="{DynamicResource Grid}" Grid.RowSpan="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="253*"/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Северобайкальск" VerticalAlignment="Top" Height="34" Width="236" TextAlignment="Center" FontSize="22"/>
+            <local:CurrentTimeCard Margin="15,73,2,305"/>
+            <local:FuatureTimeCard Margin="35,158,46,225"/>
+            <local:FuatureTimeCard Margin="35,310,46,73"/>
+            <local:FuatureTimeCard Margin="35,230,46,153"/>
+            <Image Source="/SunClouds/Line.png" Margin="0,93,57,30"/>
+        </Grid>
+        <Grid Margin="0,0,3,1" Grid.Column="2" Grid.Row="2">
+            <TextBlock Style="{DynamicResource TextBlock}" Margin="132,0,130,306" TextWrapping="Wrap" Text="Ваш основной город:" TextAlignment="Center" FontSize="18" Height="21" VerticalAlignment="Bottom"/>
+            <TextBlock Style="{DynamicResource ResourceKey=TextBlock}" Margin="131,0,131,265" TextWrapping="Wrap" Text="Избранные города:" TextAlignment="Center" FontSize="18" Height="21" VerticalAlignment="Bottom"/>
+            <TextBlock Style="{DynamicResource ResourceKey=TextBlock}" HorizontalAlignment="Center" Margin="0,270,0,0" TextWrapping="Wrap" Text="Исчислениее градусов:" Width="234" TextAlignment="Center" FontSize="18" Height="21" VerticalAlignment="Top"/>
+            <WrapPanel Style="{DynamicResource WrapPanel}" Margin="5,77,5,94" Height="166" Width="{Binding ElementName=MyScrollViewer, Path=ActualWidth}">
+                <WrapPanel.Resources>
+                    <Style TargetType="{x:Type local:for_wrappanel}">
+                        <Setter Property="Margin" Value="0,10,35,0" />
+                        <Setter Property="Padding" Value="9" />
+                    </Style>
+                </WrapPanel.Resources>
+                <WrapPanel.Children>
+                    <local:for_wrappanel/>
+                    <local:for_wrappanel/>
+                    <local:for_wrappanel/>
+                    <local:for_wrappanel/>
+                    <local:for_wrappanel/>
+                    <local:for_wrappanel/>
+                    <local:for_wrappanel/>
+                    <local:for_wrappanel/>
+                </WrapPanel.Children>
+            </WrapPanel>
+        </Grid>
+    </Grid>
+</Page>

@@ -3,10 +3,21 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+        WindowStyle="None"
         xmlns:local="clr-namespace:XXXTentacion_B_O6JlaKax"
         mc:Ignorable="d"
         Title="SunClouds" Height="450" Width="800" MinHeight="274" MinWidth="438">
     <Grid Style="{DynamicResource them}">
         <Frame Content="{Binding Frame}" NavigationUIVisibility="Hidden"/>
+        <Button Style="{DynamicResource panel}" Grid.ColumnSpan="2" Margin="0,0,10,0" Grid.RowSpan="2" VerticalContentAlignment="Center" VerticalAlignment="Top" HorizontalAlignment="Right" Content="x" Background="{x:Null}" FontSize="24" FontFamily="Jura">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="Click">
+                    <i:CallMethodAction MethodName="Close" TargetObject="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Window}}"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Button>
+        <Button Style="{DynamicResource panel}" Grid.ColumnSpan="2" Margin="0,0,27,0" Grid.RowSpan="2" VerticalContentAlignment="Center" VerticalAlignment="Top" HorizontalAlignment="Right" Content="□" Background="{x:Null}" FontSize="24" FontFamily="Jura" />
+        <Button Style="{DynamicResource panel}" Grid.ColumnSpan="2" Margin="0,0,48,0" Grid.RowSpan="2" VerticalContentAlignment="Center" VerticalAlignment="Top" HorizontalAlignment="Right" Content="─" Background="{x:Null}" FontSize="24" FontFamily="Jura" />
     </Grid>
 </Window>

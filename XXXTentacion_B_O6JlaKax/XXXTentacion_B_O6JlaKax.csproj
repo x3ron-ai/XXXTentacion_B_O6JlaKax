@@ -8,9 +8,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="SunClouds\Blizzard.png" />
     <None Remove="SunClouds\Day.png" />
+    <None Remove="SunClouds\Line.png" />
     <None Remove="SunClouds\MorningEvening.png" />
     <None Remove="SunClouds\Night.png" />
+    <None Remove="View\close.svg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -22,7 +25,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="SunClouds\Blizzard.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="SunClouds\Day.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="SunClouds\Line.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="SunClouds\MorningEvening.png">
@@ -31,6 +40,7 @@
     <Resource Include="SunClouds\Night.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="View\close.svg" />
   </ItemGroup>
 
 </Project>

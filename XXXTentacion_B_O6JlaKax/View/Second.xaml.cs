@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using XXXTentacion_B_O6JlaKax.ViewModel;
 
 namespace XXXTentacion_B_O6JlaKax
 {
@@ -22,6 +23,7 @@ namespace XXXTentacion_B_O6JlaKax
         public Second()
         {
             InitializeComponent();
+            DataContext = new MainViewModel();
         }
     }
 }
