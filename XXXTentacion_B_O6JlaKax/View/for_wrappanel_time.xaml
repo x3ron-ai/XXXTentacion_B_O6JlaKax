@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="XXXTentacion_B_O6JlaKax.View.for_wrappanel_time"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:XXXTentacion_B_O6JlaKax.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="100" d:DesignWidth="80">
+    <Grid Margin="0,0,0,60">
+        <Grid Style="{DynamicResource GridSettingCart}" Opacity="0.8">
+            <Image HorizontalAlignment="Center" Height="40" VerticalAlignment="Top" Width="40" Source="/SunClouds/Sunny.png"/>
+        </Grid>
+        <Grid Margin="0,40,0,-32" Style="{DynamicResource GridSettingCart}">
+            
+        </Grid>
+        <Grid Style="{DynamicResource GridSettingCart}" Opacity="0.8" Margin="0,72,0,-62">
+            
+        </Grid>
+
+    </Grid>
+</UserControl>

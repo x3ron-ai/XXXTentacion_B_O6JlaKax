@@ -5,10 +5,10 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:XXXTentacion_B_O6JlaKax.View"
              mc:Ignorable="d" 
-             d:DesignHeight="60" d:DesignWidth="150">
+             d:DesignHeight="60" d:DesignWidth="285">
     <Grid>
-        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Center" Height="14" Width="32" Margin="0,18,0,18" TextAlignment="Center"  Text="16:00" FontSize="9" Style="{DynamicResource TextBlock}"/>
-        <Image HorizontalAlignment="Left" Height="47" Margin="39,0,0,0" VerticalAlignment="Center" Width="49" Source="/SunClouds/Blizzard.png"/>
-        <TextBlock HorizontalAlignment="Left" Margin="90,0,0,0" TextWrapping="Wrap" Text="Ясно, 21г Ощущается  как 25" VerticalAlignment="Center" Height="39" Width="57" RenderTransformOrigin="0.5,0.5" FontSize="9" TextAlignment="Right" Style="{DynamicResource TextBlock}"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Center" Height="14" Width="32" Margin="10,0,0,0" TextAlignment="Center"  Text="16:00" FontSize="9" Style="{DynamicResource TextBlock}" RenderTransformOrigin="0.73,0.468"/>
+        <Image HorizontalAlignment="Left" Height="48" Margin="75,0,0,0" VerticalAlignment="Center" Width="49" Source="/SunClouds/Blizzard.png"/>
+        <TextBlock HorizontalAlignment="Left" Margin="159,0,0,0" TextWrapping="Wrap" Text="Ясно, 21г Ощущается  как 25" VerticalAlignment="Center" Height="40" Width="57" RenderTransformOrigin="0.5,0.5" FontSize="9" TextAlignment="Right" Style="{DynamicResource TextBlock}"/>
     </Grid>
 </UserControl>
