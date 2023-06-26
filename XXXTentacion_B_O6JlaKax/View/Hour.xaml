@@ -7,8 +7,25 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Hour">
-
-    <Grid>
-        
+    <Grid Margin="0,0,494,0" Width="256">
+        <Grid Margin="0,0,1,0" Style="{DynamicResource Grid}" Grid.RowSpan="8">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="146*"/>
+                <RowDefinition Height="80*"/>
+                <RowDefinition Height="73*"/>
+                <RowDefinition Height="86*"/>
+                <RowDefinition Height="65*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="2.988"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Северобайкальск" VerticalAlignment="Top" Height="34" Width="236" TextAlignment="Center" FontSize="22"/>
+            <local:CurrentTimeCard Margin="0,73,2,1"/>
+            <local:FuatureTimeCard  Panel.ZIndex="1" Grid.ColumnSpan="2" Grid.RowSpan="4"/>
+            <local:FuatureTimeCard Margin="0,3,2,8" Panel.ZIndex="1" Grid.Row="3"/>
+            <local:FuatureTimeCard Margin="0,4,0,2" Panel.ZIndex="1" Grid.Row="2"/>
+            <Image Source="/SunClouds/Line.png" Margin="0,93,57,30" Grid.RowSpan="5"/>
+        </Grid>
     </Grid>
 </Page>

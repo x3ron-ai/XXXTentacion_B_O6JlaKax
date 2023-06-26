@@ -5,14 +5,14 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:XXXTentacion_B_O6JlaKax.View"
              mc:Ignorable="d" 
-             d:DesignHeight="70" d:DesignWidth="236">
+             d:DesignHeight="70" d:DesignWidth="285">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0*"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Image Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="58" Margin="53,3,0,0" VerticalAlignment="Top" Width="60" Source="/SunClouds/Blizzard.png"/>
-        <TextBlock Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="122,3,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="104" Height="58" RenderTransformOrigin="0.448,0.514" TextAlignment="Right" Style="{DynamicResource TextBlock}"><Run Language="ru-ru" Text="Ясно, 21г Ощущается  как 25г"/></TextBlock>
+        <Image Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="58" Margin="63,0,0,0" VerticalAlignment="Center" Width="60" Source="/SunClouds/Blizzard.png"/>
+        <TextBlock Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="142,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="104" Height="58" RenderTransformOrigin="0.448,0.514" TextAlignment="Right" Style="{DynamicResource TextBlock}"><Run Language="ru-ru" Text="Ясно, 21г Ощущается  как 25г"/></TextBlock>
 
     </Grid>
 </UserControl>

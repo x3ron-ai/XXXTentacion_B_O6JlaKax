@@ -10,9 +10,13 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="0*"/>
-            <RowDefinition Height="38*"/>
-            <RowDefinition Height="176*"/>
-            <RowDefinition Height="11*"/>
+            <RowDefinition Height="76*"/>
+            <RowDefinition Height="78*"/>
+            <RowDefinition Height="78*"/>
+            <RowDefinition Height="73*"/>
+            <RowDefinition Height="84*"/>
+            <RowDefinition Height="39*"/>
+            <RowDefinition Height="22*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="257*"/>
@@ -20,19 +24,26 @@
             <ColumnDefinition Width="501*"/>
             <ColumnDefinition Width="21*"/>
         </Grid.ColumnDefinitions>
-        <Grid Margin="0,0,1,0" Style="{DynamicResource Grid}" Grid.RowSpan="4">
+        <Grid Margin="0,0,1,0" Style="{DynamicResource Grid}" Grid.RowSpan="8">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="146*"/>
+                <RowDefinition Height="80*"/>
+                <RowDefinition Height="73*"/>
+                <RowDefinition Height="86*"/>
+                <RowDefinition Height="65*"/>
+            </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="253*"/>
                 <ColumnDefinition Width="3*"/>
             </Grid.ColumnDefinitions>
             <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Северобайкальск" VerticalAlignment="Top" Height="34" Width="236" TextAlignment="Center" FontSize="22"/>
-            <local:CurrentTimeCard Margin="15,73,2,305"/>
-            <local:FuatureTimeCard Margin="35,158,46,225" Panel.ZIndex="1"/>
-            <local:FuatureTimeCard Margin="35,310,46,73" Panel.ZIndex="1"/>
-            <local:FuatureTimeCard Margin="35,230,46,153" Panel.ZIndex="1"/>
-            <Image Source="/SunClouds/Line.png" Margin="0,93,57,30"/>
+            <local:CurrentTimeCard Margin="0,73,2,1"/>
+            <local:FuatureTimeCard  Panel.ZIndex="1" Grid.ColumnSpan="2" Grid.RowSpan="4"/>
+            <local:FuatureTimeCard Margin="0,3,2,8" Panel.ZIndex="1" Grid.Row="3"/>
+            <local:FuatureTimeCard Margin="0,4,0,2" Panel.ZIndex="1" Grid.Row="2"/>
+            <Image Source="/SunClouds/Line.png" Margin="0,93,57,30" Grid.RowSpan="5"/>
         </Grid>
-        <Grid Margin="0,0,3,1" Grid.Column="2" Grid.Row="2">
+        <Grid Margin="0,0,3,1" Grid.Column="2" Grid.Row="2" Grid.RowSpan="5">
             <TextBlock Style="{DynamicResource TextBlock}" Margin="131,0,131,323" TextWrapping="Wrap" Text="Ваш основной город:" TextAlignment="Center" FontSize="18" Height="21" VerticalAlignment="Bottom"/>
             <TextBlock Style="{DynamicResource ResourceKey=TextBlock}" Margin="131,0,131,275" TextWrapping="Wrap" Text="Избранные города:" TextAlignment="Center" FontSize="18" Height="21" VerticalAlignment="Bottom"/>
             <TextBlock Style="{DynamicResource ResourceKey=TextBlock}" HorizontalAlignment="Center" Margin="0,0,0,45" TextWrapping="Wrap" Text="Исчислениее градусов:" Width="234" TextAlignment="Center" FontSize="18" Height="21" VerticalAlignment="Bottom"/>
