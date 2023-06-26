@@ -10,11 +10,46 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using XXXTentacion_B_O6JlaKax.ViewModel.Helpers;
+using System.Windows;
+using System.Windows.Controls;
+using XXXTentacion_B_O6JlaKax.View;
 
 namespace XXXTentacion_B_O6JlaKax.ViewModel
 {
     internal class MainViewModel : BindingHelper
     {
-        
+        #region Команды
+        public BindableCommand StartWeather { get; set; }
+        public BindableCommand page1 { get; set; }
+
+        #endregion
+        #region Свойства
+        public Page Frame
+        {
+            get { return frame; }
+            set
+            {
+                frame = value;
+                OnPropertyChanged();
+            }
+        }
+        #endregion
+        #region Переменные
+        public Page frame;
+        #endregion
+        public MainViewModel()
+        {
+            Frame = new Settings();
+            StartWeather = new BindableCommand(_ => startweather());
+        }
+        private void startweather()
+        {
+            Second s = new Second();
+            s.Show();
+        }
+        void page_two()
+        {
+
+        }
     }
 }
