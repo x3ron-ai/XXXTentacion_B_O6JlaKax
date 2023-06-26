@@ -21,7 +21,14 @@
         </Grid.ColumnDefinitions>
         <Grid Style="{DynamicResource Grid}" HorizontalAlignment="Center" Width="304" Height="203" VerticalAlignment="Center" Grid.Column="1" Grid.Row="1">
             <TextBlock Style="{DynamicResource TextBlock}" TextWrapping="Wrap" Text="SunClouds" Margin="8,10,10,152" TextAlignment="Center" FontSize="28" RenderTransformOrigin="0.42,0.504"/>
-            <Button Style="{DynamicResource Button}" Margin="23,140,0,0" Content="Узнать погоду" FontSize="20" Height="45" VerticalAlignment="Top" HorizontalAlignment="Left" Width="257" Click="Button_Click"/>
+            <Button Style="{DynamicResource Button}" Margin="23,140,0,0" Content="Узнать погоду" FontSize="20" Height="45" VerticalAlignment="Top" HorizontalAlignment="Left" Width="257">
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="Click">
+                        <i:InvokeCommandAction Command="{Binding StartWeather}"/>
+                        <i:CallMethodAction MethodName="Hide" TargetObject="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Window}}"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </Button>
             <TextBox Style="{DynamicResource TextBox}" Margin="23,88,23,68" VerticalContentAlignment="Center" FontSize="20" TextAlignment="Center"/>
         </Grid>
         <Button Style="{DynamicResource panel}" Grid.ColumnSpan="2" Margin="0,0,10,0" Grid.RowSpan="2" VerticalContentAlignment="Center" VerticalAlignment="Top" HorizontalAlignment="Right" Content="x" Background="{x:Null}" FontSize="24" FontFamily="Jura">

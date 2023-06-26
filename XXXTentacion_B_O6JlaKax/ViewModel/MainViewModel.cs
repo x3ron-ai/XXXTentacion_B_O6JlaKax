@@ -23,6 +23,7 @@ namespace XXXTentacion_B_O6JlaKax.ViewModel
         public BindableCommand page1 { get; set; }
 
         #endregion
+        #region Свойства
         public Page Frame
         {
             get { return frame; }
@@ -32,25 +33,21 @@ namespace XXXTentacion_B_O6JlaKax.ViewModel
                 OnPropertyChanged();
             }
         }
-        #region Свойства
-
         #endregion
+        #region Переменные
         public Page frame;
-
-
+        #endregion
         public MainViewModel()
         {
             Frame = new Settings();
+            StartWeather = new BindableCommand(_ => startweather());
         }
-        private void startweather(object sender, RoutedEventArgs e)
+        private void startweather()
         {
-
+            Second s = new Second();
+            s.Show();
         }
-        public void page_one()
-        {
-
-        }
-        public void page_two()
+        void page_two()
         {
 
         }

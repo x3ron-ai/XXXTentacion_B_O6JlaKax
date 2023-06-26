@@ -26,11 +26,5 @@ namespace XXXTentacion_B_O6JlaKax
             InitializeComponent();
             DataContext = new MainViewModel();
         }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            new Second().Show();
-            Close();
-        }
     }
 }
