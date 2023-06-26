@@ -10,8 +10,8 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="0*"/>
-            <RowDefinition Height="45*"/>
-            <RowDefinition Height="169*"/>
+            <RowDefinition Height="38*"/>
+            <RowDefinition Height="176*"/>
             <RowDefinition Height="11*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -27,16 +27,16 @@
             </Grid.ColumnDefinitions>
             <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Северобайкальск" VerticalAlignment="Top" Height="34" Width="236" TextAlignment="Center" FontSize="22"/>
             <local:CurrentTimeCard Margin="15,73,2,305"/>
-            <local:FuatureTimeCard Margin="35,158,46,225"/>
-            <local:FuatureTimeCard Margin="35,310,46,73"/>
-            <local:FuatureTimeCard Margin="35,230,46,153"/>
+            <local:FuatureTimeCard Margin="35,158,46,225" Panel.ZIndex="1"/>
+            <local:FuatureTimeCard Margin="35,310,46,73" Panel.ZIndex="1"/>
+            <local:FuatureTimeCard Margin="35,230,46,153" Panel.ZIndex="1"/>
             <Image Source="/SunClouds/Line.png" Margin="0,93,57,30"/>
         </Grid>
         <Grid Margin="0,0,3,1" Grid.Column="2" Grid.Row="2">
-            <TextBlock Style="{DynamicResource TextBlock}" Margin="132,0,130,306" TextWrapping="Wrap" Text="Ваш основной город:" TextAlignment="Center" FontSize="18" Height="21" VerticalAlignment="Bottom"/>
-            <TextBlock Style="{DynamicResource ResourceKey=TextBlock}" Margin="131,0,131,265" TextWrapping="Wrap" Text="Избранные города:" TextAlignment="Center" FontSize="18" Height="21" VerticalAlignment="Bottom"/>
-            <TextBlock Style="{DynamicResource ResourceKey=TextBlock}" HorizontalAlignment="Center" Margin="0,270,0,0" TextWrapping="Wrap" Text="Исчислениее градусов:" Width="234" TextAlignment="Center" FontSize="18" Height="21" VerticalAlignment="Top"/>
-            <WrapPanel Style="{DynamicResource WrapPanel}" Margin="5,77,5,94" Height="166" Width="{Binding ElementName=MyScrollViewer, Path=ActualWidth}">
+            <TextBlock Style="{DynamicResource TextBlock}" Margin="131,0,131,323" TextWrapping="Wrap" Text="Ваш основной город:" TextAlignment="Center" FontSize="18" Height="21" VerticalAlignment="Bottom"/>
+            <TextBlock Style="{DynamicResource ResourceKey=TextBlock}" Margin="131,0,131,275" TextWrapping="Wrap" Text="Избранные города:" TextAlignment="Center" FontSize="18" Height="21" VerticalAlignment="Bottom"/>
+            <TextBlock Style="{DynamicResource ResourceKey=TextBlock}" HorizontalAlignment="Center" Margin="0,0,0,45" TextWrapping="Wrap" Text="Исчислениее градусов:" Width="234" TextAlignment="Center" FontSize="18" Height="21" VerticalAlignment="Bottom"/>
+            <WrapPanel Style="{DynamicResource WrapPanel}" Margin="6,0,4,71" Height="166" Width="{Binding ElementName=MyScrollViewer, Path=ActualWidth}" VerticalAlignment="Bottom">
                 <WrapPanel.Resources>
                     <Style TargetType="{x:Type local:for_wrappanel}">
                         <Setter Property="Margin" Value="0,10,35,0" />
@@ -50,10 +50,16 @@
                     <local:for_wrappanel/>
                     <local:for_wrappanel/>
                     <local:for_wrappanel/>
-                    <local:for_wrappanel/>
-                    <local:for_wrappanel/>
                 </WrapPanel.Children>
             </WrapPanel>
+            <TextBox Style="{DynamicResource TextBox}" Margin="41,0,41,296" TextWrapping="Wrap" Text="Северобайкальск" VerticalAlignment="Bottom" Height="22"/>
+            <Button Style="{DynamicResource panel}" Margin="439,0,41,303" VerticalContentAlignment="Top" Content="x" Background="{x:Null}" FontFamily="Jura" RenderTransformOrigin="0.372,0.576" Foreground="#FFFF" Height="21" VerticalAlignment="Bottom"/>
+            <local:Radiobuttonchek Margin="146,0,250,25" Height="15" VerticalAlignment="Bottom"/>
+            <local:Radiobuttonchek Margin="263,0,132,25" Height="15" VerticalAlignment="Bottom"/>
+            <Button Style="{DynamicResource Button}" Content="Сохранить" Margin="10,0,10,0" Height="20" VerticalAlignment="Bottom"/>
+            <TextBox Style="{DynamicResource TextBox}" Margin="6,0,6,248" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Bottom" Height="22"/>
+            <Button Content="Добавить город" Margin="389,0,6,247" Background="{x:Null}" FontFamily="Jura" Foreground="#FFF " Padding="0,1,1,1" BorderThickness="0,0,0,0" Height="22" VerticalAlignment="Bottom"/>
+            <Button Style="{DynamicResource panel}" Margin="371,0,109,248" VerticalContentAlignment="Top" VerticalAlignment="Bottom" Content="x" Background="{x:Null}" FontFamily="Jura" RenderTransformOrigin="0.372,0.576" Height="21" Foreground="#FFFF"/>
         </Grid>
     </Grid>
 </Page>
