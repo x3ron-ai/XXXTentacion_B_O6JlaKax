@@ -10,11 +10,15 @@
         <Grid Style="{DynamicResource GridSettingCart}" Opacity="0.8">
             <Image HorizontalAlignment="Center" Height="40" VerticalAlignment="Top" Width="40" Source="/SunClouds/Sunny.png"/>
         </Grid>
-        <Grid Margin="0,40,0,-32" Style="{DynamicResource GridSettingCart}">
-            
+        <Grid Margin="0,40,0,-32" Style="{DynamicResource GridSettingCart}" Opacity="0.6">
+            <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="16:00" VerticalAlignment="Top" Style="{DynamicResource TextBlock}" FontSize="10" Margin="0,2,0,0"/>
+            <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="21г" VerticalAlignment="Top" Style="{DynamicResource ResourceKey=TextBlock}" Margin="0,14,0,0" FontSize="14"/>
+
         </Grid>
         <Grid Style="{DynamicResource GridSettingCart}" Opacity="0.8" Margin="0,72,0,-62">
-            
+            <TextBlock Style="{DynamicResource TextBlock}" HorizontalAlignment="Left" Margin="5,0,0,0" TextWrapping="Wrap" Text="Влаж. 21г" VerticalAlignment="Center" Height="22" Width="32" FontSize="9" TextAlignment="Center"/>
+            <TextBlock Style="{DynamicResource ResourceKey=TextBlock}" HorizontalAlignment="Left" Margin="40,0,0,0" TextWrapping="Wrap" Text="Ощущ. 21г" VerticalAlignment="Center" Height="22" Width="32" FontSize="9" TextAlignment="Center"/>
+
         </Grid>
 
     </Grid>

@@ -5,7 +5,6 @@
         <Setter Property="BorderThickness" Value="0,0,0,0"/>
         <Setter Property="Background" Value="#591E6E"/>
         <Setter Property="Foreground" Value="#FFFFFF"/>
-        <Setter Property="Text" Value="Ваш город"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
         <Setter Property="TextAlignment" Value="Center"/>
         <Setter Property="FontFamily" Value="Jura"/>
@@ -15,11 +14,13 @@
         <Setter Property="BorderThickness" Value="0,0,0,0"/>
         <Setter Property="Background" Value="#F8C5B4"/>
         <Setter Property="Foreground" Value="#FFFFFF"/>
-        <Setter Property="Text" Value="Ваш город"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
         <Setter Property="TextAlignment" Value="Center"/>
         <Setter Property="FontFamily" Value="Jura"/>
         <Setter Property="Opacity" Value="0.8"/>
+    </Style>
+    <Style x:Key="title" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="#591E6E"/>
     </Style>
     <Style x:Key="GridSettingCart" TargetType="Grid">
         <Setter Property="Background" Value="#591E6E"/>
@@ -80,8 +81,7 @@
         </Style.Triggers>
     </Style>
     <Style x:Key="WrapPanel" TargetType="WrapPanel">
-        <Setter Property="Background" Value="#F8C5B4"/>
-        <Setter Property="Opacity" Value="0.75"/>
+        <Setter Property="ScrollViewer.Foreground" Value="#fff"/>
     </Style>
     <Style x:Key="Radiobutton" TargetType="RadioButton">
         <Setter Property="Background" Value="{x:Null}"/>

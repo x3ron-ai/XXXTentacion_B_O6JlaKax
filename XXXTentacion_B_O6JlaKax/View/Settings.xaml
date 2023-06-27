@@ -24,25 +24,6 @@
             <ColumnDefinition Width="501*"/>
             <ColumnDefinition Width="21*"/>
         </Grid.ColumnDefinitions>
-        <Grid Margin="0,0,1,0" Style="{DynamicResource Grid}" Grid.RowSpan="8">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="146*"/>
-                <RowDefinition Height="80*"/>
-                <RowDefinition Height="73*"/>
-                <RowDefinition Height="86*"/>
-                <RowDefinition Height="65*"/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="253*"/>
-                <ColumnDefinition Width="3*"/>
-            </Grid.ColumnDefinitions>
-            <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Северобайкальск" VerticalAlignment="Top" Height="34" Width="236" TextAlignment="Center" FontSize="22"/>
-            <local:CurrentTimeCard Margin="0,73,2,1"/>
-            <local:FuatureTimeCard  Panel.ZIndex="1" Grid.ColumnSpan="2" Grid.RowSpan="4"/>
-            <local:FuatureTimeCard Margin="0,3,2,8" Panel.ZIndex="1" Grid.Row="3"/>
-            <local:FuatureTimeCard Margin="0,4,0,2" Panel.ZIndex="1" Grid.Row="2"/>
-            <Image Source="/SunClouds/Line.png" Margin="0,93,57,30" Grid.RowSpan="5"/>
-        </Grid>
         <Grid Margin="0,0,3,1" Grid.Column="2" Grid.Row="2" Grid.RowSpan="5">
             <TextBlock Style="{DynamicResource TextBlock}" Margin="131,0,131,323" TextWrapping="Wrap" Text="Ваш основной город:" TextAlignment="Center" FontSize="18" Height="21" VerticalAlignment="Bottom"/>
             <TextBlock Style="{DynamicResource ResourceKey=TextBlock}" Margin="131,0,131,275" TextWrapping="Wrap" Text="Избранные города:" TextAlignment="Center" FontSize="18" Height="21" VerticalAlignment="Bottom"/>
@@ -63,8 +44,8 @@
                     <local:for_wrappanel/>
                 </WrapPanel.Children>
             </WrapPanel>
-            <TextBox Style="{DynamicResource TextBox}" Margin="41,0,41,296" TextWrapping="Wrap" Text="Северобайкальск" VerticalAlignment="Bottom" Height="22"/>
-            <Button Style="{DynamicResource panel}" Margin="439,0,41,303" VerticalContentAlignment="Top" Content="x" Background="{x:Null}" FontFamily="Jura" RenderTransformOrigin="0.372,0.576" Foreground="#FFFF" Height="21" VerticalAlignment="Bottom"/>
+            <TextBox Style="{DynamicResource TextBox}" Margin="6,0,10,296" TextWrapping="Wrap" Text="Северобайкальск" VerticalAlignment="Bottom" Height="22"/>
+            <Button Style="{DynamicResource panel}" Margin="470,0,10,297" VerticalContentAlignment="Top" Content="x" Background="{x:Null}" FontFamily="Jura" RenderTransformOrigin="0.372,0.576" Foreground="#FFFF" Height="21" VerticalAlignment="Bottom"/>
             <local:Radiobuttonchek Margin="146,0,250,25" Height="15" VerticalAlignment="Bottom"/>
             <local:Radiobuttonchek Margin="263,0,132,25" Height="15" VerticalAlignment="Bottom"/>
             <Button Style="{DynamicResource Button}" Content="Сохранить" Margin="10,0,10,0" Height="20" VerticalAlignment="Bottom"/>

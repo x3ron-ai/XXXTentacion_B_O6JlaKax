@@ -6,7 +6,6 @@
         <Setter Property="BorderThickness" Value="0,0,0,0"/>
         <Setter Property="Background" Value="#87B6CA"/>
         <Setter Property="Foreground" Value="#FFFFFF"/>
-        <Setter Property="Text" Value="Ваш город"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
         <Setter Property="TextAlignment" Value="Center"/>
         <Setter Property="FontFamily" Value="Jura"/>
@@ -16,11 +15,13 @@
         <Setter Property="BorderThickness" Value="0,0,0,0"/>
         <Setter Property="Background" Value="#87B6CA"/>
         <Setter Property="Foreground" Value="#FFFFFF"/>
-        <Setter Property="Text" Value="Ваш город"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
         <Setter Property="TextAlignment" Value="Center"/>
         <Setter Property="FontFamily" Value="Jura"/>
         <Setter Property="Opacity" Value="0.8"/>
+    </Style>
+    <Style x:Key="title" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="#3D95B9"/>
     </Style>
     <Style x:Key="GridSettingCart" TargetType="Grid">
         <Setter Property="Background" Value="#3D95B9"/>
@@ -82,8 +83,7 @@
         </Style.Triggers>
     </Style>
     <Style x:Key="WrapPanel" TargetType="WrapPanel">
-        <Setter Property="Background" Value="#F8C5B4"/>
-        <Setter Property="Opacity" Value="0.7"/>
+        <Setter Property="ScrollViewer.Foreground" Value="#fff"/>
     </Style>
     <!--<v:String x:Key="Main">#F8C5B4</v:String>
     <v:String x:Key="Second">#87B6CA</v:String>

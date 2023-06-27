@@ -4,11 +4,32 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+        xmlns:l="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
         WindowStyle="None"
-        xmlns:local="clr-namespace:XXXTentacion_B_O6JlaKax"
+        xmlns:local="clr-namespace:XXXTentacion_B_O6JlaKax" 
+        xmlns:local1="clr-namespace:XXXTentacion_B_O6JlaKax.View"
         mc:Ignorable="d"
         Title="SunClouds" Height="450" Width="800" MinHeight="274" MinWidth="438">
     <Grid Style="{DynamicResource them}">
+        <Grid Margin="0,0,534,0" Style="{DynamicResource Grid}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="146*"/>
+                <RowDefinition Height="80*"/>
+                <RowDefinition Height="73*"/>
+                <RowDefinition Height="86*"/>
+                <RowDefinition Height="65*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="253*"/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Style="{DynamicResource title}" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="{Binding City}" VerticalAlignment="Top" Height="34" Width="236" TextAlignment="Center" FontSize="22"/>
+            <local1:CurrentTimeCard Margin="0,73,2,1"/>
+            <local1:FuatureTimeCard  Panel.ZIndex="1" Grid.ColumnSpan="2" Grid.RowSpan="4"/>
+            <local1:FuatureTimeCard Margin="0,3,2,8" Panel.ZIndex="1" Grid.Row="3"/>
+            <local1:FuatureTimeCard Margin="0,4,0,2" Panel.ZIndex="1" Grid.Row="2"/>
+            <Image Source="/SunClouds/Line.png" Margin="0,93,57,30" Grid.RowSpan="5"/>
+        </Grid>
         <Frame Content="{Binding Frame}" NavigationUIVisibility="Hidden"/>
         <Button Style="{DynamicResource panel}" Grid.ColumnSpan="2" Margin="0,0,10,0" Grid.RowSpan="2" VerticalContentAlignment="Center" VerticalAlignment="Top" HorizontalAlignment="Right" Content="x" Background="{x:Null}" FontSize="24" FontFamily="Jura">
             <i:Interaction.Triggers>
@@ -19,5 +40,19 @@
         </Button>
         <Button Style="{DynamicResource panel}" Grid.ColumnSpan="2" Margin="0,0,27,0" Grid.RowSpan="2" VerticalContentAlignment="Center" VerticalAlignment="Top" HorizontalAlignment="Right" Content="□" Background="{x:Null}" FontSize="24" FontFamily="Jura" />
         <Button Style="{DynamicResource panel}" Grid.ColumnSpan="2" Margin="0,0,48,0" Grid.RowSpan="2" VerticalContentAlignment="Center" VerticalAlignment="Top" HorizontalAlignment="Right" Content="─" Background="{x:Null}" FontSize="24" FontFamily="Jura" />
+        <Button Style="{DynamicResource Button}" Height="46" Background="{x:Null}" Content="Настройки" Margin="583,0,54,364" FontSize="28" VerticalAlignment="Bottom">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="Click">
+                    <i:InvokeCommandAction Command="{Binding Page_two}"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Button>
+        <Button Style="{DynamicResource Button}" Height="46" Background="{x:Null}" Content="Погода" Margin="298,0,338,364" FontSize="28" VerticalAlignment="Bottom">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="Click">
+                    <i:InvokeCommandAction Command="{Binding Page_one}"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Button>
     </Grid>
 </Window>
