@@ -13,10 +13,13 @@
     <None Remove="SunClouds\Line.png" />
     <None Remove="SunClouds\MorningEvening.png" />
     <None Remove="SunClouds\Night.png" />
+    <None Remove="SunClouds\Sunny.png" />
     <None Remove="View\close.svg" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="DotNetProjects.WpfToolkit.DataVisualization" Version="6.1.94" />
+    <PackageReference Include="MaterialDesignThemes" Version="4.9.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 
@@ -38,6 +41,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="SunClouds\Night.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="SunClouds\Sunny.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="View\close.svg" />

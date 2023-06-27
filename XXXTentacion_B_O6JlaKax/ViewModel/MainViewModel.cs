@@ -13,6 +13,7 @@ using XXXTentacion_B_O6JlaKax.ViewModel.Helpers;
 using System.Windows;
 using System.Windows.Controls;
 using XXXTentacion_B_O6JlaKax.View;
+using System.Threading;
 
 namespace XXXTentacion_B_O6JlaKax.ViewModel
 {
@@ -20,7 +21,8 @@ namespace XXXTentacion_B_O6JlaKax.ViewModel
     {
         #region Команды
         public BindableCommand StartWeather { get; set; }
-        public BindableCommand page1 { get; set; }
+        public BindableCommand Page_one { get; set; }
+        public BindableCommand Page_two { get; set; }
 
         #endregion
         #region Свойства
@@ -39,17 +41,50 @@ namespace XXXTentacion_B_O6JlaKax.ViewModel
         #endregion
         public MainViewModel()
         {
-            Frame = new Settings();
+            see_them();
+            page_one();
             StartWeather = new BindableCommand(_ => startweather());
+            Page_one = new BindableCommand(_ => page_one());
+            Page_two = new BindableCommand(_ => page_two());
         }
         private void startweather()
         {
             Second s = new Second();
             s.Show();
         }
-        void page_two()
+        private void page_one()
         {
-
+            Frame = new Hour();
+        }
+        private void page_two()
+        {
+            Frame = new Settings();
+        }
+        async void see_them()
+        {
+            while(true)
+            {
+                await set_them();
+            }
+        }
+        async Task set_them()
+        {
+            string them = "";
+            List<List<int>> times = new List<List<int>>()
+            {
+                new List<int> { 0,1,2,3 }, 
+                new List<int> {4,5,6,7,8,9,10,11,17,18,19,20,21,22,23},
+                new List<int> { 12,13,14,15 },
+            };
+            if (times[0].Contains(Convert.ToInt32(DateTime.Now.Hour)))
+                them = "Night";
+            if (times[1].Contains(Convert.ToInt32(DateTime.Now.Hour)))
+                them = "MorningEvening";
+            if (times[2].Contains(Convert.ToInt32(DateTime.Now.Hour)))
+                them = "Night";
+            Application.Current.Resources.MergedDictionaries.Clear();
+            Application.Current.Resources.MergedDictionaries.Insert(0, new ResourceDictionary { Source = new Uri($"pack://application:,,,/Style;component/{them}.xaml") });
+            await Task.Delay((60 - Convert.ToInt32(DateTime.Now.Minute)) * 6000);
         }
     }
 }
