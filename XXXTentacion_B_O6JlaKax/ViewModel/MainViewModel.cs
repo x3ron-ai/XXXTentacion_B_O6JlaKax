@@ -50,6 +50,9 @@ namespace XXXTentacion_B_O6JlaKax.ViewModel
         #endregion
         public MainViewModel()
         {
+            if (Properties.Settings.Default.City != null && Properties.Settings.Default.City != "")
+                City = Properties.Settings.Default.City;
+            else City = "Ваш город";
             Frame = new Hour();
             StartWeather = new BindableCommand(_ => startweather());
             Page_one = new BindableCommand(_ => page_one());
@@ -58,6 +61,13 @@ namespace XXXTentacion_B_O6JlaKax.ViewModel
         }
         private void startweather()
         {
+            if (city == null || city == "" || city == "Ваш город")
+            {
+                MessageBox.Show("Ошибка ввода!");
+                Environment.Exit(0);
+            }
+            Properties.Settings.Default.City = city;
+            Properties.Settings.Default.Save();
             Second s = new Second();
             s.Show();
         }
