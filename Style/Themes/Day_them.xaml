@@ -19,6 +19,9 @@
         <Setter Property="FontFamily" Value="Jura"/>
         <Setter Property="Opacity" Value="0.8"/>
     </Style>
+    <Style x:Key="title" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="#3D95B9"/>
+    </Style>
     <Style x:Key="GridSettingCart" TargetType="Grid">
         <Setter Property="Background" Value="#3D95B9"/>
     </Style>
