@@ -11,7 +11,7 @@
         mc:Ignorable="d"
         Title="SunClouds" Height="450" Width="800" MinHeight="274" MinWidth="438">
     <Grid Style="{DynamicResource them}">
-        <Grid Margin="0,0,546,0" Style="{DynamicResource Grid}">
+        <Grid Margin="0,0,534,0" Style="{DynamicResource Grid}">
             <Grid.RowDefinitions>
                 <RowDefinition Height="146*"/>
                 <RowDefinition Height="80*"/>
