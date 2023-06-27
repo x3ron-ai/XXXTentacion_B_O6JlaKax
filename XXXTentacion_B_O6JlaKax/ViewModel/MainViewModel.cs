@@ -13,7 +13,6 @@ using XXXTentacion_B_O6JlaKax.ViewModel.Helpers;
 using System.Windows;
 using System.Windows.Controls;
 using XXXTentacion_B_O6JlaKax.View;
-using System.Threading;
 
 namespace XXXTentacion_B_O6JlaKax.ViewModel
 {
@@ -35,17 +34,27 @@ namespace XXXTentacion_B_O6JlaKax.ViewModel
                 OnPropertyChanged();
             }
         }
+        public string City
+        {
+            get { return city; }
+            set
+            {
+                city = value;
+                OnPropertyChanged();
+            }
+        }
         #endregion
         #region Переменные
         public Page frame;
+        public string city;
         #endregion
         public MainViewModel()
         {
-            see_them();
-            page_one();
+            Frame = new Hour();
             StartWeather = new BindableCommand(_ => startweather());
             Page_one = new BindableCommand(_ => page_one());
             Page_two = new BindableCommand(_ => page_two());
+            see_them();
         }
         private void startweather()
         {

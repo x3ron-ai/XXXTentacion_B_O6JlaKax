@@ -81,6 +81,7 @@
     <Style x:Key="WrapPanel" TargetType="WrapPanel">
         <Setter Property="Background" Value="#F8C5B4"/>
         <Setter Property="Opacity" Value="0.7"/>
+        <Setter Property="ScrollViewer.Foreground" Value="#fff"/>
     </Style>
     <!--<v:String x:Key="Main">#F8C5B4</v:String>
     <v:String x:Key="Second">#87B6CA</v:String>
