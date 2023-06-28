@@ -8,8 +8,6 @@
         WindowStyle="None"
         xmlns:local="clr-namespace:XXXTentacion_B_O6JlaKax"
         mc:Ignorable="d"
-        xmlns:view="clr-namespace:XXXTentacion_B_O6JlaKax.ViewModel" 
-        d:DataContext="{d:DesignInstance Type=view:MainViewModel}"
         Title="SunClouds" Height="450" Width="800" MinHeight="204" MinWidth="305">
     <WindowChrome.WindowChrome>
         <WindowChrome CaptionHeight="1" CornerRadius="0"/>
