@@ -13,6 +13,9 @@ using XXXTentacion_B_O6JlaKax.ViewModel.Helpers;
 using System.Windows;
 using System.Windows.Controls;
 using XXXTentacion_B_O6JlaKax.View;
+using System.Windows.Data;
+using XXXTentacion_B_O6JlaKax.Model;
+using System.IO;
 
 namespace XXXTentacion_B_O6JlaKax.ViewModel
 {
@@ -47,9 +50,17 @@ namespace XXXTentacion_B_O6JlaKax.ViewModel
         #region Переменные
         public Page frame;
         public string city;
+        public string favName;
+        public string favCords;
+        public List<for_wrappanel> favoriteCity = new List<for_wrappanel>();
         #endregion
         public MainViewModel()
         {
+            if (!File.Exists("favours.json"))
+            {
+                File.WriteAllText("favours.json", "[]");
+            }
+
             if (Properties.Settings.Default.City != null && Properties.Settings.Default.City != "")
                 City = Properties.Settings.Default.City;
             else City = "Ваш город";
@@ -78,6 +89,20 @@ namespace XXXTentacion_B_O6JlaKax.ViewModel
         private void page_two()
         {
             Frame = new Settings();
+            foreach (var elem in ApiHelper.getFavour())
+            {
+                for_wrappanel newPanel = new for_wrappanel();
+
+                newPanel.DataContext = elem;
+                Binding cityNameBinding = new Binding("name");
+                Binding cityCordBinding = new Binding("coords");
+                cityNameBinding.Source = elem;
+                cityCordBinding.Source = elem;
+                newPanel.SetBinding(for_wrappanel.CityNameProperty, cityNameBinding);
+                newPanel.SetBinding(for_wrappanel.CityCordProperty, cityCordBinding);
+
+                favoriteCity.Add(newPanel);
+            }
         }
         async void see_them()
         {
