@@ -8,7 +8,17 @@
         WindowStyle="None"
         xmlns:local="clr-namespace:XXXTentacion_B_O6JlaKax"
         mc:Ignorable="d"
+        xmlns:view="clr-namespace:XXXTentacion_B_O6JlaKax.ViewModel" 
+        d:DataContext="{d:DesignInstance Type=view:MainViewModel}"
         Title="SunClouds" Height="450" Width="800" MinHeight="204" MinWidth="305">
+    <WindowChrome.WindowChrome>
+        <WindowChrome CaptionHeight="1" CornerRadius="0"/>
+    </WindowChrome.WindowChrome>
+    <Window.CommandBindings>
+        <CommandBinding Command="{x:Static SystemCommands.MaximizeWindowCommand}" CanExecute="CanExecute" Executed="Max" />
+        <CommandBinding Command="{x:Static SystemCommands.MinimizeWindowCommand}" CanExecute="CanExecute" Executed="Hide" />
+        <!--<CommandBinding Command="{x:Static SystemCommands.RestoreWindowCommand}" CanExecute="CommandBinding_CanExecute" Executed="CommandBinding_Executed_Restore" />-->
+    </Window.CommandBindings>
     <Grid Style="{DynamicResource them}">
         <Grid.RowDefinitions>
             <RowDefinition Height="0*"/>
@@ -35,11 +45,11 @@
         <Button Style="{DynamicResource panel}" Grid.ColumnSpan="2" Margin="0,0,10,0" Grid.RowSpan="2" VerticalContentAlignment="Center" VerticalAlignment="Top" HorizontalAlignment="Right" Content="x" Background="{x:Null}" FontSize="24" FontFamily="Jura">
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="Click">
-                    <i:CallMethodAction MethodName="Close" TargetObject="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Window}}"/>
+                    <i:InvokeCommandAction Command="{Binding Exit}"/>
                 </i:EventTrigger>
             </i:Interaction.Triggers>
         </Button>
-        <Button Style="{DynamicResource panel}" Grid.ColumnSpan="2" Margin="0,0,27,0" Grid.RowSpan="2" VerticalContentAlignment="Center" VerticalAlignment="Top" HorizontalAlignment="Right" Content="□" Background="{x:Null}" FontSize="24" FontFamily="Jura" />
-        <Button Style="{DynamicResource panel}" Grid.ColumnSpan="2" Margin="0,0,48,0" Grid.RowSpan="2" VerticalContentAlignment="Center" VerticalAlignment="Top" HorizontalAlignment="Right" Content="─" Background="{x:Null}" FontSize="24" FontFamily="Jura" />
+        <Button Style="{DynamicResource panel}" Grid.ColumnSpan="2" Margin="0,0,27,0" Grid.RowSpan="2" VerticalContentAlignment="Center" VerticalAlignment="Top" HorizontalAlignment="Right" Content="□" Background="{x:Null}" FontSize="24" FontFamily="Jura"  Command="{x:Static SystemCommands.MaximizeWindowCommand}"/>
+        <Button Style="{DynamicResource panel}" Grid.ColumnSpan="2" Margin="0,0,48,0" Grid.RowSpan="2" VerticalContentAlignment="Center" VerticalAlignment="Top" HorizontalAlignment="Right" Content="─" Background="{x:Null}" FontSize="24" FontFamily="Jura" Command="{x:Static SystemCommands.MinimizeWindowCommand}"/>
     </Grid>
 </Window>

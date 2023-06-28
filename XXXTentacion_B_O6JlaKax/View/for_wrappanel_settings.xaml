@@ -4,11 +4,10 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:XXXTentacion_B_O6JlaKax.View"
-             mc:Ignorable="d" 
-             d:DesignHeight="45" d:DesignWidth="100">
-    <Grid Style="{DynamicResource GridSettingCart}" Margin="0,0,-50,-15">
-        <Button Style="{DynamicResource panel}" Margin="140,-5,0,0" VerticalContentAlignment="Top" VerticalAlignment="Top" HorizontalAlignment="Left" Content="x" Background="{x:Null}" FontFamily="Jura" RenderTransformOrigin="0.5,0.5" Height="14" Width="10" Foreground="#FFFF"/>
-        <TextBlock HorizontalAlignment="Center" Text="{Binding CityName, RelativeSource={RelativeSource AncestorType=UserControl}}" Margin="0,10,0,0" TextWrapping="Wrap" Foreground="#FFF" FontFamily="Jura" VerticalAlignment="Top" Width="137" TextAlignment="Center" Height="17" FontSize="14"/>
-        <TextBlock HorizontalAlignment="Center" Text="{Binding CityCord, RelativeSource={RelativeSource AncestorType=UserControl}}" Background="White" Margin="0,32,0,0" VerticalAlignment="Top" Width="150" Height="29" FontSize="10"/>
+             mc:Ignorable="d" Height="60" Width="150">
+    <Grid Style="{DynamicResource GridSettingCart}" Width="150" Height="60">
+        <Button Style="{DynamicResource panel}"  VerticalContentAlignment="Top" VerticalAlignment="Top" HorizontalAlignment="Right" Content="x" Background="{x:Null}" FontFamily="Jura" RenderTransformOrigin="0.5,0.5" Height="14" Width="10" Foreground="#FFFF"/>
+        <TextBlock HorizontalAlignment="Left" Text="{Binding CityName, RelativeSource={RelativeSource AncestorType=UserControl}}" Margin="3,10,0,0" TextWrapping="Wrap" Foreground="#FFF" FontFamily="Jura" VerticalAlignment="Top" Width="137" TextAlignment="Center" Height="17" FontSize="14"/>
+        <TextBlock HorizontalAlignment="Center" Text="{Binding CityCord, RelativeSource={RelativeSource AncestorType=UserControl}}" Style="{DynamicResource TextBlock}" Margin="0,32,0,0" VerticalAlignment="Top" Width="150" Height="29" FontSize="10"/>
     </Grid>
 </UserControl>

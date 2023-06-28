@@ -10,6 +10,9 @@
         xmlns:local1="clr-namespace:XXXTentacion_B_O6JlaKax.View"
         mc:Ignorable="d"
         Title="SunClouds" Height="450" Width="800" MinHeight="274" MinWidth="438">
+    <WindowChrome.WindowChrome>
+        <WindowChrome CaptionHeight="1" CornerRadius="0"/>
+    </WindowChrome.WindowChrome>
     <Grid Style="{DynamicResource them}">
         <Grid Margin="0,0,534,0" Style="{DynamicResource Grid}">
             <Grid.RowDefinitions>
@@ -34,7 +37,7 @@
         <Button Style="{DynamicResource panel}" Grid.ColumnSpan="2" Margin="0,0,10,0" Grid.RowSpan="2" VerticalContentAlignment="Center" VerticalAlignment="Top" HorizontalAlignment="Right" Content="x" Background="{x:Null}" FontSize="24" FontFamily="Jura">
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="Click">
-                    <i:CallMethodAction MethodName="Close" TargetObject="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Window}}"/>
+                    <i:InvokeCommandAction Command="{Binding Exit}"/>
                 </i:EventTrigger>
             </i:Interaction.Triggers>
         </Button>

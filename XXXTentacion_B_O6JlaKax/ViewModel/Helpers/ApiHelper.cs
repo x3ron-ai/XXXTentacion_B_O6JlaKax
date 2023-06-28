@@ -32,8 +32,7 @@ namespace XXXTentacion_B_O6JlaKax.ViewModel.Helpers
 
         public static List<CityInfo> getFavour()
         {
-            List<CityInfo> response = JsonConvert.DeserializeObject<List<CityInfo>>(File.ReadAllText("favours.json"));
-            return response;
+            return JsonConvert.DeserializeObject<List<CityInfo>>(File.ReadAllText("favours.json")); ;
         }
 
         public static void startUpdater()
