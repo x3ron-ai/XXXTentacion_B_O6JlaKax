@@ -11,17 +11,16 @@
       Title="Hour">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="71*"/>
-            <ColumnDefinition Width="129*"/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Grid Margin="0,0,18,10" Height="351" Width="498" Grid.Column="1" VerticalAlignment="Bottom">
+        <Grid Margin="284,0,18,10" Height="351" Width="498" VerticalAlignment="Bottom">
             <Grid Height="70" VerticalAlignment="Top" Style="{DynamicResource Grid}">
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Style="{DynamicResource TextBlock}" Text="21г" VerticalAlignment="Center" HorizontalAlignment="Left" Width="50" FontSize="26" TextAlignment="Center"/>
                     <TextBlock Style="{DynamicResource TextBlock}" Text="Ощущение: 21г" TextAlignment="Center" Height="40" Width="75" TextWrapping="Wrap" FontSize="14"/>
                     <TextBlock Style="{DynamicResource TextBlock}" Text="Мин. 21г" TextAlignment="Center" Height="40" Width="34" TextWrapping="Wrap" FontSize="14"/>
                     <TextBlock Style="{DynamicResource TextBlock}" Text="Макс. 21г" TextAlignment="Center" Height="40" Width="38" TextWrapping="Wrap" FontSize="14"/>
-                    <TextBlock Style="{DynamicResource TextBlock}" Text="Давление: 21мм рт. ст." TextAlignment="Center" Height="40" Width="71" TextWrapping="Wrap" FontSize="14"/>
+                    <TextBlock Style="{DynamicResource TextBlock}" Text="Давление: 21мм рт. ст." TextAlignment="Center" Height="40" Width="75" TextWrapping="Wrap" FontSize="14"/>
                     <TextBlock Style="{DynamicResource TextBlock}" Text="Влажность: 20%" TextAlignment="Center" Height="40" Width="79" TextWrapping="Wrap" FontSize="14"/>
                     <TextBlock Style="{DynamicResource TextBlock}" Text="Ветер м/с: 7 м/с" TextAlignment="Center" Height="40" Width="74" TextWrapping="Wrap" FontSize="14"/>
                     <TextBlock Style="{DynamicResource TextBlock}" Text="Ветер г: 290" TextAlignment="Center" Height="40" Width="60" TextWrapping="Wrap" FontSize="14"/>
