@@ -15,5 +15,16 @@ namespace XXXTentacion_B_O6JlaKax.ViewModel.Helpers
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
+        protected void Set<T>(ref T field, T value, [CallerMemberName] string propName = "")
+        {
+            if (field != null)
+            {
+                if (!field.Equals(value))
+                {
+                    field = value;
+                    PropertyChanged(this, new PropertyChangedEventArgs(propName));
+                }
+            }
+        }
     }
 }

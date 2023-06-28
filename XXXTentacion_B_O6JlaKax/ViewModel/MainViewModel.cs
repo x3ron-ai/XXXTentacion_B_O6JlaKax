@@ -16,6 +16,7 @@ using XXXTentacion_B_O6JlaKax.View;
 using System.Windows.Data;
 using XXXTentacion_B_O6JlaKax.Model;
 using System.IO;
+using System.Windows.Input;
 
 namespace XXXTentacion_B_O6JlaKax.ViewModel
 {
@@ -25,6 +26,8 @@ namespace XXXTentacion_B_O6JlaKax.ViewModel
         public BindableCommand StartWeather { get; set; }
         public BindableCommand Page_one { get; set; }
         public BindableCommand Page_two { get; set; }
+        public BindableCommand Vis_invis { get; set; }
+        public BindableCommand Exit { get; set; }
 
         #endregion
         #region Свойства
@@ -37,6 +40,34 @@ namespace XXXTentacion_B_O6JlaKax.ViewModel
                 OnPropertyChanged();
             }
         }
+
+        public Visibility Vis
+        {
+            get { return vis; }
+            set
+            {
+                vis = value;
+                OnPropertyChanged();
+            }
+        }
+        public Radiobuttonchek F
+        {
+            get { return f; }
+            set
+            {
+                f = value;
+                OnPropertyChanged();
+            }
+        }
+        public Radiobuttonchek C
+        {
+            get { return c; }
+            set
+            {
+                c = value;
+                OnPropertyChanged();
+            }
+        }
         public string City
         {
             get { return city; }
@@ -46,12 +77,25 @@ namespace XXXTentacion_B_O6JlaKax.ViewModel
                 OnPropertyChanged();
             }
         }
+        public ObservableCollection<for_wrappanel> Items
+        {
+            get { return _items; }
+            set
+            {
+                _items = value;
+                OnPropertyChanged(nameof(Items));
+            }
+        }
         #endregion
         #region Переменные
         public Page frame;
         public string city;
+        public Radiobuttonchek c;
+        public Radiobuttonchek f;
         public string favName;
         public string favCords;
+        public Visibility vis = Visibility.Hidden;
+        private ObservableCollection<for_wrappanel> _items = new ObservableCollection<for_wrappanel>();
         public List<for_wrappanel> favoriteCity = new List<for_wrappanel>();
         #endregion
         public MainViewModel()
@@ -64,10 +108,16 @@ namespace XXXTentacion_B_O6JlaKax.ViewModel
             if (Properties.Settings.Default.City != null && Properties.Settings.Default.City != "")
                 City = Properties.Settings.Default.City;
             else City = "Ваш город";
+            F = new Radiobuttonchek() { Title = "Форенгейт" };
+            C = new Radiobuttonchek() { Title = "Цельсии" };
             Frame = new Hour();
+            Vis = Visibility.Visible;
             StartWeather = new BindableCommand(_ => startweather());
             Page_one = new BindableCommand(_ => page_one());
             Page_two = new BindableCommand(_ => page_two());
+            Vis_invis = new BindableCommand(_ => vis_invis());
+            Exit = new BindableCommand(_ => exit());
+
             see_them();
         }
         private void startweather()
@@ -89,24 +139,10 @@ namespace XXXTentacion_B_O6JlaKax.ViewModel
         private void page_two()
         {
             Frame = new Settings();
-            foreach (var elem in ApiHelper.getFavour())
-            {
-                for_wrappanel newPanel = new for_wrappanel();
-
-                newPanel.DataContext = elem;
-                Binding cityNameBinding = new Binding("name");
-                Binding cityCordBinding = new Binding("coords");
-                cityNameBinding.Source = elem;
-                cityCordBinding.Source = elem;
-                newPanel.SetBinding(for_wrappanel.CityNameProperty, cityNameBinding);
-                newPanel.SetBinding(for_wrappanel.CityCordProperty, cityCordBinding);
-
-                favoriteCity.Add(newPanel);
-            }
         }
         async void see_them()
         {
-            while(true)
+            while (true)
             {
                 await set_them();
             }
@@ -116,7 +152,7 @@ namespace XXXTentacion_B_O6JlaKax.ViewModel
             string them = "";
             List<List<int>> times = new List<List<int>>()
             {
-                new List<int> { 0,1,2,3 }, 
+                new List<int> { 0,1,2,3 },
                 new List<int> {4,5,6,7,8,9,10,11,17,18,19,20,21,22,23},
                 new List<int> { 12,13,14,15 },
             };
@@ -129,6 +165,15 @@ namespace XXXTentacion_B_O6JlaKax.ViewModel
             Application.Current.Resources.MergedDictionaries.Clear();
             Application.Current.Resources.MergedDictionaries.Insert(0, new ResourceDictionary { Source = new Uri($"pack://application:,,,/Style;component/{them}.xaml") });
             await Task.Delay((60 - Convert.ToInt32(DateTime.Now.Minute)) * 6000);
+        }
+
+        void vis_invis()
+        {
+
+        }
+        void exit()
+        {
+            Environment.Exit(0);
         }
     }
 }

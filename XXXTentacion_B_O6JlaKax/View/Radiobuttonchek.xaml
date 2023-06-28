@@ -7,6 +7,6 @@
              mc:Ignorable="d" 
              d:DesignHeight="14" d:DesignWidth="88">
     <Grid Style="{DynamicResource GridSettingCart}">
-        <RadioButton Style="{DynamicResource Radiobutton}" BorderBrush="#FFF" GroupName="Temp" Content="RadioButton" HorizontalAlignment="Center" VerticalAlignment="Center" Width="88"/>
+        <RadioButton Style="{DynamicResource Radiobutton}" BorderBrush="#FFF" GroupName="Temp" Content="{Binding Title}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="88"/>
     </Grid>
 </UserControl>

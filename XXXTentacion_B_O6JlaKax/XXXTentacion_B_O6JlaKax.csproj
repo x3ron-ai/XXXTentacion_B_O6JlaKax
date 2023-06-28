@@ -30,9 +30,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="favours.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
     <Resource Include="SunClouds\Blizzard.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>

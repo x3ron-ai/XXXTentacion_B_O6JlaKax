@@ -21,6 +21,13 @@ namespace XXXTentacion_B_O6JlaKax.View
     /// </summary>
     public partial class Radiobuttonchek : UserControl
     {
+        public static readonly DependencyProperty property = DependencyProperty.Register("Title", typeof(string), typeof(Radiobuttonchek), new PropertyMetadata(string.Empty));
+        public string Title
+        {
+            get { return (string)GetValue(property); }
+            set { SetValue(property, value); }
+        }
+
         public Radiobuttonchek()
         {
             InitializeComponent();
