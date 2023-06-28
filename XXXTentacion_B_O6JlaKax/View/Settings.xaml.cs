@@ -26,5 +26,10 @@ namespace XXXTentacion_B_O6JlaKax.View
             InitializeComponent();
             DataContext = new MainViewModel();
         }
+
+        private void for_wrappanel_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

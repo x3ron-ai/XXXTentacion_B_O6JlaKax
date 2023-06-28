@@ -7,8 +7,22 @@ using System.Threading.Tasks;
 
 namespace XXXTentacion_B_O6JlaKax.Model
 {
+    public class CityInfo
+    {
+        public string name { get; set; } = "";
+        public string coords { get; set; } = "";
+        public CityInfo(string name, string coords)
+        {
+            this.name = name;
+            this.coords = coords;
+        }
+        public CityInfo() { }
+    }
     public class WeatherInfo
     {
+        public WeatherInfo() {
+            name = "ERROR";
+        }
         public WeatherInfo(JObject data)
         {
             name = Convert.ToString(data["weather"][0]["main"]);
@@ -21,10 +35,10 @@ namespace XXXTentacion_B_O6JlaKax.Model
 
         public string name { get; set; }
         public string description { get; set; }
-        public double temp { get; set; } 
-        public double temp_feels { get; set; }
-        public double wind_speed { get; set; }
-        public double humidity { get; set; }
+        public double temp { get; set; } = 0;
+        public double temp_feels { get; set; } = 0;
+        public double wind_speed { get; set; } = 0;
+        public double humidity { get; set; } = 0;
 
     }
 }

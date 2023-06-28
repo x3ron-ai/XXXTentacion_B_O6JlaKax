@@ -7,6 +7,8 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using XXXTentacion_B_O6JlaKax.Model;
+using System.Windows;
+using System.IO;
 
 namespace XXXTentacion_B_O6JlaKax.ViewModel.Helpers
 {
@@ -17,8 +19,26 @@ namespace XXXTentacion_B_O6JlaKax.ViewModel.Helpers
             HttpClient httpClient = new HttpClient();
             HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Get, $"https://api.openweathermap.org/data/2.5/weather?q={city}&appid=cfcef6872ef1ebf9b1683779749b649d&lang=ru&units=metric");
             HttpResponseMessage response = httpClient.Send(request);
-            WeatherInfo weatherInfo = new WeatherInfo(JsonConvert.DeserializeObject<JObject>(response.Content.ReadAsStringAsync().Result));
-            return weatherInfo;
+            try
+            {
+                WeatherInfo weatherInfo = new WeatherInfo(JsonConvert.DeserializeObject<JObject>(response.Content.ReadAsStringAsync().Result));
+                return weatherInfo;
+            }
+            catch
+            {
+                return new WeatherInfo();
+            }
+        }
+
+        public static List<CityInfo> getFavour()
+        {
+            List<CityInfo> response = JsonConvert.DeserializeObject<List<CityInfo>>(File.ReadAllText("favours.json"));
+            return response;
+        }
+
+        public static void startUpdater()
+        {
+
         }
     }
 }

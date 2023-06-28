@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="favours.json" />
     <None Remove="SunClouds\Blizzard.png" />
     <None Remove="SunClouds\Day.png" />
     <None Remove="SunClouds\Line.png" />
@@ -29,6 +30,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="favours.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="SunClouds\Blizzard.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
