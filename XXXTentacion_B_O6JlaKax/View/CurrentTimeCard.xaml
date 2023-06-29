@@ -11,8 +11,8 @@
             <ColumnDefinition Width="0*"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Image Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="58" Margin="63,0,0,0" VerticalAlignment="Center" Width="60" Source="/SunClouds/Blizzard.png"/>
-        <TextBlock Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="142,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="104" Height="58" RenderTransformOrigin="0.448,0.514" TextAlignment="Right" Style="{DynamicResource TextBlock}"><Run Language="ru-ru" Text="Ясно, 21г Ощущается  как 25г"/></TextBlock>
+        <Image Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="58" Margin="76,0,0,0" VerticalAlignment="Center" Width="60" Source="/SunClouds/Blizzard.png"/>
+        <TextBlock Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="137,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="104" Height="58" RenderTransformOrigin="0.448,0.514" TextAlignment="Right" Style="{DynamicResource TextBlock}"><Run Language="ru-ru" Text="Ясно, 21г Ощущается  как 25г"/></TextBlock>
 
     </Grid>
 </UserControl>

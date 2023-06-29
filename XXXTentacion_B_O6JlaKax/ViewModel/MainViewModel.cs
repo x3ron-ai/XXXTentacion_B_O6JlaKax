@@ -17,6 +17,7 @@ using System.Windows.Data;
 using XXXTentacion_B_O6JlaKax.Model;
 using System.IO;
 using System.Windows.Input;
+using System.Threading;
 
 namespace XXXTentacion_B_O6JlaKax.ViewModel
 {
@@ -26,8 +27,8 @@ namespace XXXTentacion_B_O6JlaKax.ViewModel
         public BindableCommand StartWeather { get; set; }
         public BindableCommand Page_one { get; set; }
         public BindableCommand Page_two { get; set; }
-        public BindableCommand Vis_invis { get; set; }
         public BindableCommand Exit { get; set; }
+        public BindableCommand Save { get; set; }
 
         #endregion
         #region Свойства
@@ -40,34 +41,6 @@ namespace XXXTentacion_B_O6JlaKax.ViewModel
                 OnPropertyChanged();
             }
         }
-
-        public Visibility Vis
-        {
-            get { return vis; }
-            set
-            {
-                vis = value;
-                OnPropertyChanged();
-            }
-        }
-        public Radiobuttonchek F
-        {
-            get { return f; }
-            set
-            {
-                f = value;
-                OnPropertyChanged();
-            }
-        }
-        public Radiobuttonchek C
-        {
-            get { return c; }
-            set
-            {
-                c = value;
-                OnPropertyChanged();
-            }
-        }
         public string City
         {
             get { return city; }
@@ -77,25 +50,20 @@ namespace XXXTentacion_B_O6JlaKax.ViewModel
                 OnPropertyChanged();
             }
         }
-        public ObservableCollection<for_wrappanel> Items
+        public ObservableCollection<for_wrappanel> List
         {
-            get { return _items; }
+            get => list;
             set
             {
-                _items = value;
-                OnPropertyChanged(nameof(Items));
+                list = value;
+                Set(ref list, value);
             }
         }
         #endregion
         #region Переменные
         public Page frame;
         public string city;
-        public Radiobuttonchek c;
-        public Radiobuttonchek f;
-        public string favName;
-        public string favCords;
-        public Visibility vis = Visibility.Hidden;
-        private ObservableCollection<for_wrappanel> _items = new ObservableCollection<for_wrappanel>();
+        private ObservableCollection<for_wrappanel> list = new ObservableCollection<for_wrappanel>();
         public List<for_wrappanel> favoriteCity = new List<for_wrappanel>();
         #endregion
         public MainViewModel()
@@ -108,15 +76,12 @@ namespace XXXTentacion_B_O6JlaKax.ViewModel
             if (Properties.Settings.Default.City != null && Properties.Settings.Default.City != "")
                 City = Properties.Settings.Default.City;
             else City = "Ваш город";
-            F = new Radiobuttonchek() { Title = "Форенгейт" };
-            C = new Radiobuttonchek() { Title = "Цельсии" };
             Frame = new Hour();
-            Vis = Visibility.Visible;
             StartWeather = new BindableCommand(_ => startweather());
             Page_one = new BindableCommand(_ => page_one());
             Page_two = new BindableCommand(_ => page_two());
-            Vis_invis = new BindableCommand(_ => vis_invis());
             Exit = new BindableCommand(_ => exit());
+            Save = new BindableCommand(_ => save());
 
             see_them();
         }
@@ -139,6 +104,7 @@ namespace XXXTentacion_B_O6JlaKax.ViewModel
         private void page_two()
         {
             Frame = new Settings();
+            List.Add(new for_wrappanel());
         }
         async void see_them()
         {
@@ -166,14 +132,13 @@ namespace XXXTentacion_B_O6JlaKax.ViewModel
             Application.Current.Resources.MergedDictionaries.Insert(0, new ResourceDictionary { Source = new Uri($"pack://application:,,,/Style;component/{them}.xaml") });
             await Task.Delay((60 - Convert.ToInt32(DateTime.Now.Minute)) * 6000);
         }
-
-        void vis_invis()
-        {
-
-        }
         void exit()
         {
             Environment.Exit(0);
+        }
+        void save()
+        {
+            City = "";
         }
     }
 }

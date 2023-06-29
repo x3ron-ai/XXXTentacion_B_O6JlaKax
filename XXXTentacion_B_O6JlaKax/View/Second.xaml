@@ -14,43 +14,50 @@
         <WindowChrome CaptionHeight="1" CornerRadius="0"/>
     </WindowChrome.WindowChrome>
     <Grid Style="{DynamicResource them}">
-        <Grid Margin="0,0,534,0" Style="{DynamicResource Grid}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="271*"/>
+            <ColumnDefinition Width="529*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Margin="0,0,5,0" Style="{DynamicResource Grid}" MaxWidth="260">
             <Grid.RowDefinitions>
-                <RowDefinition Height="146*"/>
+                <RowDefinition Height="72*"/>
+                <RowDefinition Height="74*"/>
                 <RowDefinition Height="80*"/>
                 <RowDefinition Height="73*"/>
                 <RowDefinition Height="86*"/>
                 <RowDefinition Height="65*"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="253*"/>
+                <ColumnDefinition Width="35*"/>
+                <ColumnDefinition Width="159*"/>
+                <ColumnDefinition Width="69*"/>
                 <ColumnDefinition Width="3*"/>
             </Grid.ColumnDefinitions>
-            <TextBlock Style="{DynamicResource title}" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="{Binding City}" VerticalAlignment="Top" Height="34" Width="236" TextAlignment="Center" FontSize="22"/>
-            <local1:CurrentTimeCard Margin="0,73,2,1"/>
-            <local1:FuatureTimeCard  Panel.ZIndex="1" Grid.ColumnSpan="2" Grid.RowSpan="4"/>
-            <local1:FuatureTimeCard Margin="0,3,2,8" Panel.ZIndex="1" Grid.Row="3"/>
-            <local1:FuatureTimeCard Margin="0,4,0,2" Panel.ZIndex="1" Grid.Row="2"/>
-            <Image Source="/SunClouds/Line.png" Margin="0,93,57,30" Grid.RowSpan="5"/>
+            <TextBlock Style="{DynamicResource title}" Margin="2,10,0,0" Text="{Binding City}" VerticalAlignment="Top" Height="34" TextAlignment="Center" FontSize="22" HorizontalAlignment="Left" Width="257" Grid.ColumnSpan="3"/>
+            <local1:CurrentTimeCard Margin="7,1,0,1" HorizontalAlignment="Left" Width="249" Grid.Row="1" Grid.ColumnSpan="3"/>
+            <local1:FuatureTimeCard Grid.RowSpan="5" HorizontalAlignment="Left" Width="225" Margin="10,0,0,0" Grid.ColumnSpan="3"/>
+            <local1:FuatureTimeCard Margin="10,3,22,8" Panel.ZIndex="1" Grid.Row="4" Grid.ColumnSpan="3"/>
+            <local1:FuatureTimeCard Margin="10,4,0,2" Panel.ZIndex="1" Grid.Row="3" HorizontalAlignment="Left" Width="225" Grid.ColumnSpan="3"/>
+            <Image Source="/SunClouds/Line.png" Margin="7,37,4,30" Grid.RowSpan="5" StretchDirection="UpOnly" Stretch="None" Grid.Row="1" Grid.Column="1"/>
         </Grid>
-        <Frame Content="{Binding Frame}" NavigationUIVisibility="Hidden"/>
-        <Button Style="{DynamicResource panel}" Grid.ColumnSpan="2" Margin="0,0,10,0" Grid.RowSpan="2" VerticalContentAlignment="Center" VerticalAlignment="Top" HorizontalAlignment="Right" Content="x" Background="{x:Null}" FontSize="24" FontFamily="Jura">
+        <Frame Content="{Binding Frame}" NavigationUIVisibility="Hidden" Grid.ColumnSpan="2" Margin="10,10,10,0" Height="430" VerticalAlignment="Top"/>
+        <Button Style="{DynamicResource panel}" Margin="0,0,10,0" VerticalContentAlignment="Center" VerticalAlignment="Top" HorizontalAlignment="Right" Content="x" Background="{x:Null}" FontSize="24" FontFamily="Jura" Grid.Column="1">
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="Click">
                     <i:InvokeCommandAction Command="{Binding Exit}"/>
                 </i:EventTrigger>
             </i:Interaction.Triggers>
         </Button>
-        <Button Style="{DynamicResource panel}" Grid.ColumnSpan="2" Margin="0,0,27,0" Grid.RowSpan="2" VerticalContentAlignment="Center" VerticalAlignment="Top" HorizontalAlignment="Right" Content="□" Background="{x:Null}" FontSize="24" FontFamily="Jura" />
-        <Button Style="{DynamicResource panel}" Grid.ColumnSpan="2" Margin="0,0,48,0" Grid.RowSpan="2" VerticalContentAlignment="Center" VerticalAlignment="Top" HorizontalAlignment="Right" Content="─" Background="{x:Null}" FontSize="24" FontFamily="Jura" />
-        <Button Style="{DynamicResource Button}" Height="46" Background="{x:Null}" Content="Настройки" Margin="583,0,54,364" FontSize="28" VerticalAlignment="Bottom">
+        <Button Style="{DynamicResource panel}" Margin="0,0,27,0" VerticalContentAlignment="Center" VerticalAlignment="Top" HorizontalAlignment="Right" Content="□" Background="{x:Null}" FontSize="24" FontFamily="Jura" Grid.Column="1" />
+        <Button Style="{DynamicResource panel}" Margin="0,0,48,0" VerticalContentAlignment="Center" VerticalAlignment="Top" HorizontalAlignment="Right" Content="─" Background="{x:Null}" FontSize="24" FontFamily="Jura" Grid.Column="1" />
+        <Button Style="{DynamicResource Button}" Background="{x:Null}" Content="Настройки" Margin="312,40,54,0" FontSize="28" Grid.Column="1" Height="46" VerticalAlignment="Top">
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="Click">
                     <i:InvokeCommandAction Command="{Binding Page_two}"/>
                 </i:EventTrigger>
             </i:Interaction.Triggers>
         </Button>
-        <Button Style="{DynamicResource Button}" Height="46" Background="{x:Null}" Content="Погода" Margin="298,0,338,364" FontSize="28" VerticalAlignment="Bottom">
+        <Button Style="{DynamicResource Button}" Background="{x:Null}" Content="Погода" Margin="27,40,338,0" FontSize="28" Grid.Column="1" Height="46" VerticalAlignment="Top">
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="Click">
                     <i:InvokeCommandAction Command="{Binding Page_one}"/>
